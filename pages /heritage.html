@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heritage Sites</title>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Rameswaram (Pamban Bridge) background */
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/7e/Pamban_Bridge_Rameswaram.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+/* Dark overlay for readability */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  z-index: -1;
+}
+
+/* Content layer */
+.content {
+  padding: 20px;
+}
+
+.heritage-card {
+  background: rgba(255,255,255,0.95);
+  width: 300px;
+  margin: 30px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.heritage-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.heritage-info {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background -->
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<!-- Content -->
+<div class="content">
+
+  <div class="heritage-card">
+    <img src="../images/heritage/birahadeeswara.jpg" alt="Brihadeeswarar Temple">
+    <div class="heritage-info">
+      <h3>Brihadeeswarar Temple</h3>
+      <p>UNESCO World Heritage Site, Thanjavur</p>
+    </div>
+  </div>
+
+  <div class="heritage-card">
+    <img src="../images/heritage/meenakshi-temple.jpg" alt="Meenakshi Amman Temple">
+    <div class="heritage-info">
+      <h3>Meenakshi Amman Temple</h3>
+      <p>Historic Dravidian temple, Madurai</p>
+    </div>
+  </div>
+
+  <div class="heritage-card">
+    <img src="../images/heritage/shore.jpg" alt="Shore Temple">
+    <div class="heritage-info">
+      <h3>Shore Temple</h3>
+      <p>Pallava architecture, Mahabalipuram</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
