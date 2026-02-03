@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English → Tamil Translator</title>
+<style>
+body {
+  font-family: "Noto Sans Tamil", Arial, sans-serif; /* Font that supports Tamil */
+  padding: 20px;
+}
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+}
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-top: 10px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #1565c0;
+}
+#translationResult {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+}
+#pronunciationResult {
+  font-size: 20px;
+  color: blue;
+  margin-top: 5px;
+}
+</style>
+
+<!-- Google Font for Tamil -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h2>English → Tamil Translator</h2>
+
+<textarea id="textToTranslate" placeholder="Enter English word or phrase"></textarea>
+<button onclick="translateText()">Translate</button>
+
+<div id="translationResult"></div>
+<div id="pronunciationResult"></div>
+
+<script>
+// Offline dictionary with Tamil + pronunciation
+const dict = {
+  "hello": ["வணக்கம்", "Vanakkam"],
+  "thank you": ["நன்றி", "Nandri"],
+  "how are you": ["நீங்கள் எப்படி இருக்கிறீர்கள்", "Neenga epadi irukkireergal"],
+  "water": ["தண்ணீர்", "Thanni"],
+  "food": ["சாப்பாடு", "Saapadu"],
+  "house": ["வீடு", "Veedu"],
+  "school": ["பள்ளி", "Palli"],
+  "mother": ["அம்மா", "Amma"],
+  "father": ["அப்பா", "Appa"],
+  "friend": ["நண்பன்", "Nanban"],
+  "perform": ["செயல்", "Seyal"],
+  "run": ["ஓடு", "Odu"],
+  "eat": ["சாப்பிடு", "Saapidu"],
+  "go": ["போ", "Po"],
+  "study": ["படிக்கவும்", "Padikkavum"]
+};
+
+function translateText() {
+  const input = document.getElementById("textToTranslate").value.trim().toLowerCase();
+
+  if (!input) {
+    document.getElementById("translationResult").innerText = "Please enter English text";
+    document.getElementById("pronunciationResult").innerText = "";
+    return;
+  }
+
+  if (dict[input]) {
+    const tamilWord = dict[input][0];
+    const pronounceWord = dict[input][1];
+
+    document.getElementById("translationResult").innerText = tamilWord;
+    document.getElementById("pronunciationResult").innerText = "Pronunciation: " + pronounceWord;
+
+    // Text-to-speech using pronunciation (Latin letters)
+    const utter = new SpeechSynthesisUtterance(pronounceWord);
+    utter.lang = "en-US"; // TTS works reliably with Latin letters
+    speechSynthesis.speak(utter);
+
+  } else {
+    document.getElementById("translationResult").innerText = "Translation not found";
+    document.getElementById("pronunciationResult").innerText = "";
+  }
+}
+</script>
+
+</body>
+</html>
