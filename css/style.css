@@ -1,0 +1,350 @@
+/* ===== Home Page Styling ===== */  
+body.home {  
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),  
+              url("https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1470&q=80");  
+  background-size: cover;  
+  background-position: center;  
+  min-height: 100vh;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+}  
+
+.home-container {  
+  text-align: center;  
+  color: #fff;  
+  padding: 20px;  
+  background: rgba(0,0,0,0.35);  
+  border-radius: 15px;  
+}  
+
+.home-container h1 {  
+  font-size: 3rem;  
+  margin-bottom: 15px;  
+}  
+
+.home-container p {  
+  font-size: 1.2rem;  
+  margin-bottom: 25px;  
+}  
+
+.home-container button {  
+  padding: 15px 35px;  
+  font-size: 1rem;  
+  font-weight: 600;  
+  border: none;  
+  border-radius: 10px;  
+  cursor: pointer;  
+  background: #ffcc00;  
+  transition: 0.3s;  
+}  
+
+.home-container button:hover {  
+  background: #ffd633;  
+}  
+
+/* ===== Dashboard Page ===== */  
+body.dashboard {  
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),  
+              url("../images/dashboard-bg.jpg");  
+  background-size: cover;  
+  background-position: center;  
+  min-height: 100vh;  
+  color: #fff;  
+}  
+
+.dashboard-grid {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
+  gap: 25px;  
+  padding: 40px;  
+  max-width: 1200px;  
+  margin: auto;  
+}  
+
+.card {  
+  background: rgba(255,255,255,0.18);  
+  backdrop-filter: blur(12px);  
+  border-radius: 18px;  
+  padding: 40px 20px;  
+  text-align: center;  
+  font-size: 1.2rem;  
+  cursor: pointer;  
+  font-weight: 600;  
+  transition: 0.3s;  
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);  
+}  
+
+.card:hover {  
+  transform: translateY(-10px);  
+  background: rgba(255,255,255,0.28);  
+}  
+
+/* ===== Heritage Page ===== */  
+body.heritage {  
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),  
+              url("../images/heritage/heritage-bg.jpg");  
+  background-size: cover;  
+  background-position: center;  
+  min-height: 100vh;  
+  color: #fff;  
+  padding: 40px 20px;  
+}  
+
+.heritage-grid {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  
+  gap: 25px;  
+  max-width: 1200px;  
+  margin: auto;  
+  align-items: start;  
+}  
+
+.heritage-card {  
+  display: flex;  
+  flex-direction: column;  
+  border-radius: 18px;  
+  overflow: hidden;  
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);  
+  cursor: pointer;  
+  transition: transform 0.3s ease;  
+  height: 100%;  
+}  
+
+.heritage-card:hover {  
+  transform: scale(1.05);  
+}  
+
+.heritage-card img {  
+  width: 100%;  
+  height: 220px;  
+  object-fit: cover;  
+  flex-shrink: 0;  
+}  
+
+.heritage-info {  
+  flex-grow: 1;  
+  background: rgba(0,0,0,0.7);  
+  padding: 15px;  
+  text-align: center;  
+}  
+
+.heritage-info h3 {  
+  margin: 0 0 5px 0;  
+  font-size: 1.2rem;  
+}  
+
+.heritage-info p {  
+  margin: 0;  
+  font-size: 0.9rem;  
+  opacity: 0.85;  
+}  
+
+/* ===== Culinary Trails Page ===== */  
+body.culinary {  
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),  
+              url("../images/culinary/bg-culinary.jpg");  
+  background-size: cover;  
+  background-position: center;  
+  background-attachment: fixed;  
+  min-height: 100vh;  
+  color: #fff;  
+  padding: 40px 20px;  
+}  
+
+.culinary-grid {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+  gap: 25px;  
+  max-width: 1200px;  
+  margin: auto;  
+}  
+
+.culinary-card {  
+  position: relative;  
+  border-radius: 18px;  
+  overflow: hidden;  
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);  
+  cursor: pointer;  
+  transition: transform 0.3s ease;  
+}  
+
+.culinary-card:hover {  
+  transform: scale(1.05);  
+}  
+
+.culinary-card img {  
+  width: 100%;  
+  height: 220px;  
+  object-fit: cover;  
+}  
+
+/* ===== Eco Dashboard Background ===== */  
+body.eco {  
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),  
+              url("../images/eco.jpg");  
+  background-size: cover;  
+  background-position: center;  
+  min-height: 100vh;  
+  color: #fff;  
+}  
+/* ===== AI Itinerary Planner Page ===== */
+body.itinerary {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("../images/ai.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: #fff;
+  padding: 20px;
+}
+
+.itinerary-form {
+  max-width: 500px;
+  margin: 20px auto;
+  background: rgba(0,0,0,0.55);
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.itinerary-form input,
+.itinerary-form select,
+.itinerary-form button {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+.itinerary-form button {
+  background: #ffcc00;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.itinerary-form button:hover {
+  background: #ffd633;
+}
+
+.itinerary-output {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.itinerary-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.itinerary-card:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===== Local Artisans Page ===== */  
+body.artisans {  
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),  
+              url("../images/artisans-bg.jpg");  
+  background-size: cover;  
+  background-position: center;  
+  background-attachment: fixed;  
+  min-height: 100vh;  
+  color: #fff;  
+  padding: 40px 20px;  
+}  
+
+.artisan-grid {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+  gap: 25px;  
+  max-width: 1200px;  
+  margin: auto;  
+}  
+
+.artisan-card {  
+  position: relative;  
+  border-radius: 18px;  
+  overflow: hidden;  
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);  
+  cursor: pointer;  
+  transition: transform 0.3s ease;  
+}  
+
+.artisan-card:hover {  
+  transform: scale(1.05);  
+}  
+
+.artisan-card img {  
+  width: 100%;  
+  height: 220px;  
+  object-fit: cover;  
+}  
+
+/* ===== FIX: FORCE IMAGES TO SHOW ===== */  
+.artisan-card img,  
+.heritage-card img,  
+.culinary-card img {  
+  display: block;  
+  position: relative;  
+  z-index: 1;  
+}  
+
+/* ===== FIX: TEXT ABOVE IMAGE ===== */  
+.artisan-info,  
+.heritage-info,  
+.culinary-info {  
+  position: relative;  
+  z-index: 2;  
+  background: rgba(0,0,0,0.7);  
+  padding: 15px;  
+  text-align: center;  
+}  
+
+.artisan-info h3,  
+.heritage-info h3,  
+.culinary-info h3 {  
+  margin: 0 0 5px 0;  
+}  
+
+.artisan-info p,  
+.heritage-info p,  
+.culinary-info p {  
+  margin: 0;  
+  font-size: 0.9rem;  
+  opacity: 0.9;  
+}  
+
+/* ===== Mobile Vertical Layout ===== */  
+@media (max-width: 768px) {  
+  .artisan-grid,  
+  .heritage-grid,  
+  .culinary-grid {  
+    grid-template-columns: 1fr;  
+  }  
+
+  .artisan-card,  
+  .heritage-card,  
+  .culinary-card {  
+    max-width: 90%;  
+    margin: auto;  
+  }  
+}
